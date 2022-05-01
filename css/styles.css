@@ -639,15 +639,6 @@ position: relative;
 
   outline: none;
 }
-/* .subscription-btn::after{
-  content:"";
-  background-image: url(/images/icon\ send.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  border: transparent;
-} */
-
 
 .subscription-btn:hover,
 .subscription-btn:focus{
@@ -834,7 +825,7 @@ justify-content: center;
 
 .modal-check:checked + .modal-check-text::before{
   background-color: var(--accent-color);
-  background-image: url(/images/Check.svg);
+  background-image: url(./images/Check.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
