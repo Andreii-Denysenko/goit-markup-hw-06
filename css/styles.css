@@ -825,7 +825,7 @@ justify-content: center;
 
 .modal-check:checked + .modal-check-text::before{
   background-color: var(--accent-color);
-  background-image: url(./images/Check.svg);
+  background-image: url(../images/Check.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
