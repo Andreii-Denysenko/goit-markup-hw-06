@@ -587,6 +587,73 @@ transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: var(--main-light-color-text);
 }
 
+.section-subscription{
+  margin-left: 93px;
+}
+.box-subscription{
+  display: flex;
+}
+.subscription-inp{
+  padding-left: 16px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  width: 358px;
+  height: 50px;
+  color: var(--main-light-color-text);
+}
+
+.subscription-btn{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  color: var(--main-light-color-text);
+  display: flex;
+  height: 50px;
+  width: 200px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+margin-left: 12px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+position: relative;
+}
+.icon-send{
+  fill: var(--main-light-color-text);
+  position: absolute;
+  top: 22%;
+}
+.icon-subscription{
+  margin-left: 10px;
+}
+
+.subscription-inp:focus{
+
+  outline: none;
+}
+/* .subscription-btn::after{
+  content:"";
+  background-image: url(/images/icon\ send.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: transparent;
+} */
+
+
+.subscription-btn:hover,
+.subscription-btn:focus{
+  color: var(--main-light-color-text);
+  background-color: var(--color-hero-bt-hover);
+}
 
 /*------------------------------------Адресс */
 .city-address {
@@ -647,7 +714,7 @@ cursor: pointer;
 
 }
 
-.icon-close:hover{
+.icon-close-black:hover{
   fill: var(--accent-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -681,18 +748,33 @@ margin-bottom: 12px;
 width: 100%;
 height: 40px;
 border: 1px solid rgba(33, 33, 33, 0.2);
-box-sizing: border-box;
 border-radius: 4px;
-
-margin-bottom: 10px;
-padding: 12px;
+padding-left: 42px;
+outline: none;
+transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input:hover,
+
 .modal-input:focus{
   border: 1px solid var(--accent-color);
 }
 
+.modal-input:focus + .input-icon{
+fill: var(--accent-color);
+}
+
+.input-wrap{
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.input-icon{
+  position: absolute;
+  left:12px;
+  top:50%;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .input-text{
 
@@ -713,9 +795,12 @@ padding: 16px 12px;
 
 border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
+outline: none;
+margin-bottom: 20px;
+transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
-.modal-coment:hover,
+
 .modal-coment:focus{
   border: 1px solid var(--accent-color);
 }
@@ -725,6 +810,43 @@ border-radius: 4px;
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-check-text{
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+color: var(--secondary-text-color);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.modal-check-text::before{
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--color-logo-dark);
+  border-radius: 3px;
+  margin-right: 8px;
+}
+
+.modal-check:checked + .modal-check-text::before{
+  background-color: var(--accent-color);
+  background-image: url(/images/Check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: transparent;
+}
+.form-check{
+  margin-bottom: 30px;
+}
+
+.link-check{
+  color: var(--accent-color);
+  margin-left: 5px;
 }
 
 
@@ -743,6 +865,10 @@ border-radius: 4px;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 4px;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
